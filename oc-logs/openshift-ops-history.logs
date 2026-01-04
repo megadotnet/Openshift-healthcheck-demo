@@ -1,0 +1,230 @@
+$ oc project heshenghuo-prod
+Now using project "heshenghuo-prod" on server "https://devops.hsh.w.cn:8443".
+
+Administrator@LD-201802012328 MINGW64 /
+$ oc get pod -o wide
+NAME                                    READY     STATUS    RESTARTS   AGE       IP              NODE
+activity-admin-131-gr8hh                1/1       Running   0          19d       10.128.11.203   openshift-node-15.hsh.io
+admin-77-x8wvg                          1/1       Running   0          56d       10.128.8.20     openshift-node-14.hsh.io
+cache-test-5-mb2j8                      1/1       Running   0          56d       10.130.10.180   openshift-node-13.hsh.io
+game-web-app-89-nf7tr                   1/1       Running   1          159d      10.129.2.187    openshift-node-03.hsh.io
+gold-command-8-ctpf3                    1/1       Running   0          57d       10.128.7.108    openshift-node-08.hsh.io
+gold-query-9-jk4kj                      1/1       Running   1          105d      10.129.2.206    openshift-node-03.hsh.io
+goldreceive-provider-14-z9f7f           1/1       Running   0          19d       10.128.11.200   openshift-node-15.hsh.io
+hazelcast-monitor-9-89s7x               1/1       Running   0          36d       10.130.11.10    openshift-node-13.hsh.io
+heactivity-517-9-k874f                  1/1       Running   3          168d      10.130.10.166   openshift-node-13.hsh.io
+heactivity-challenge-36-bh2xq           1/1       Running   0          56d       10.130.10.171   openshift-node-13.hsh.io
+heactivity-login-88-9cmrq               1/1       Running   0          19d       10.131.7.89     openshift-node-12.hsh.io
+heactivity-login-88-jz2gg               1/1       Running   1          70d       10.130.2.9      openshift-node-07.hsh.io
+heactivity-login-88-kp9r2               1/1       Running   1          70d       10.129.2.193    openshift-node-03.hsh.io
+heactivity-loginv2-31-8tp5x             1/1       Running   0          56d       10.128.8.21     openshift-node-14.hsh.io
+heactivity-loginv2-31-vz0sr             1/1       Running   0          19d       10.129.7.36     openshift-node-10.hsh.io
+hsh-actmsg-17-m19xz                     1/1       Running   0          56d       10.128.11.101   openshift-node-15.hsh.io
+hsh-life-consumer-24-4b77n              1/1       Running   0          33d       10.129.3.43     openshift-node-03.hsh.io
+hsh-life-consumer-24-lc94g              1/1       Running   0          33d       10.129.7.23     openshift-node-10.hsh.io
+hsh-life-provider-37-7dbdv              1/1       Running   0          53d       10.128.11.124   openshift-node-15.hsh.io
+hsh-life-provider-37-jf604              1/1       Running   0          56d       10.130.8.142    openshift-node-11.hsh.io
+hsh-log-provider-12-qjkc1               1/1       Running   0          19d       10.130.9.0      openshift-node-11.hsh.io
+hsh-log-provider-12-rmdcp               1/1       Running   0          53d       10.130.2.45     openshift-node-07.hsh.io
+hsh-reservation-8-74d5b                 1/1       Running   0          7d        10.130.7.254    openshift-node-09.hsh.io
+hsh-upload-2-wxk3r                      1/1       Running   1          29d       10.130.8.240    openshift-node-11.hsh.io
+hshaccount-consumer-6-clk0j             1/1       Running   1          168d      10.131.8.31     openshift-node-17.hsh.io
+hshblackmsg-admin-3-44cqx               1/1       Running   1          168d      10.128.8.14     openshift-node-14.hsh.io
+hshcard-checkcancel-consumer-59-d0gk1   1/1       Running   0          2d        10.130.11.81    openshift-node-13.hsh.io
+hshcharge-provider-6-dsc6n              1/1       Running   1          202d      10.131.8.38     openshift-node-17.hsh.io
+hshcmcc-async-provider-7-jkz1v          1/1       Running   1          168d      10.131.8.29     openshift-node-17.hsh.io
+hshcmcc-provider-95-bj7v1               1/1       Running   0          7d        10.129.7.58     openshift-node-10.hsh.io
+hshcmcc-provider-95-f267v               1/1       Running   0          7d        10.130.6.8      openshift-node-09.hsh.io
+hshcmcc-provider-95-spf6b               1/1       Running   0          7d        10.130.11.74    openshift-node-13.hsh.io
+hshcoupon-batch-22-7ztzb                1/1       Running   1          108d      10.128.8.9      openshift-node-14.hsh.io
+hshgame-consumer-14-5sq9c               1/1       Running   0          19d       10.129.7.37     openshift-node-10.hsh.io
+hshgame-kafka-26-bcdds                  1/1       Running   1          159d      10.128.8.16     openshift-node-14.hsh.io
+hshgame-kafka-26-s3p6w                  1/1       Running   1          168d      10.129.6.194    openshift-node-10.hsh.io
+hshgame-provider-29-1jdqm               1/1       Running   1          168d      10.130.8.139    openshift-node-11.hsh.io
+hshgold-consumer-16-vpz7g               1/1       Running   3          168d      10.131.8.34     openshift-node-17.hsh.io
+hshgold-provider-22-pdmd6               1/1       Running   0          56d       10.129.6.201    openshift-node-10.hsh.io
+hshmarketing-consumer-135-066sd         1/1       Running   0          8d        10.130.7.219    openshift-node-09.hsh.io
+hshmarketing-consumer-135-7dg8w         1/1       Running   0          8d        10.130.9.35     openshift-node-11.hsh.io
+hshmarketing-consumer-135-nc9v4         1/1       Running   0          8d        10.128.8.122    openshift-node-14.hsh.io
+hshmarketing-provider-13-83xfn          1/1       Running   0          22d       10.130.7.159    openshift-node-09.hsh.io
+hshmarketing-provider-13-q0w8n          1/1       Running   0          53d       10.128.11.123   openshift-node-15.hsh.io
+hshmember-consumer-24-40gzs             1/1       Running   0          48d       10.131.8.102    openshift-node-17.hsh.io
+hshmember-consumer-24-x10g3             1/1       Running   0          48d       10.129.3.3      openshift-node-03.hsh.io
+hshmember-provider-17-064xc             1/1       Running   0          53d       10.130.10.198   openshift-node-13.hsh.io
+hshmember-provider-17-6rkmm             1/1       Running   1          102d      10.128.8.13     openshift-node-14.hsh.io
+hshreport-admin-21-7wf59                1/1       Running   1          168d      10.128.8.8      openshift-node-14.hsh.io
+hshresources-admin-83-kp168             1/1       Running   1          168d      10.131.6.234    openshift-node-12.hsh.io
+hshresources-advert-33-7bkxd            1/1       Running   0          48d       10.130.2.81     openshift-node-07.hsh.io
+hshresources-advert-33-80lrz            1/1       Running   0          48d       10.131.7.28     openshift-node-12.hsh.io
+hshresources-advert-33-xjv5m            1/1       Running   0          16d       10.129.3.65     openshift-node-03.hsh.io
+hshresources-consumer-83-2wzg7          1/1       Running   0          56d       10.130.8.149    openshift-node-11.hsh.io
+hshresources-consumer-83-lmhn2          1/1       Running   0          56d       10.129.2.210    openshift-node-03.hsh.io
+hshresources-flow-39-0nxw0              1/1       Running   0          16d       10.130.7.172    openshift-node-09.hsh.io
+hshresources-flow-39-1mx2r              1/1       Running   1          64d       10.128.7.103    openshift-node-08.hsh.io
+hshresources-flow-39-hlt0r              1/1       Running   0          16d       10.128.11.205   openshift-node-15.hsh.io
+hshresources-new-admin-54-mn624         1/1       Running   0          22d       10.130.11.46    openshift-node-13.hsh.io
+hshresources-new-consumer-22-hvwg3      1/1       Running   0          28d       10.130.8.243    openshift-node-11.hsh.io
+hshresources-new-consumer-22-mjlk8      1/1       Running   0          13d       10.129.10.112   openshift-node-18.hsh.io
+hshresources-new-provider-60-kx35t      1/1       Running   0          1d        10.129.7.65     openshift-node-10.hsh.io
+hshresources-new-provider-60-lj548      1/1       Running   0          1d        10.130.2.219    openshift-node-07.hsh.io
+hshresources-provider-121-3v5td         1/1       Running   0          22d       10.130.2.116    openshift-node-07.hsh.io
+hshresources-provider-121-l96bn         1/1       Running   2          110d      10.131.6.239    openshift-node-12.hsh.io
+hshticket-consumer-48-dlrcj             1/1       Running   1          110d      10.129.2.192    openshift-node-03.hsh.io
+hshticket-consumer-48-x5fbl             1/1       Running   0          56d       10.131.8.41     openshift-node-17.hsh.io
+hshticket-kafka-31-c066c                1/1       Running   1          168d      10.129.6.199    openshift-node-10.hsh.io
+hshticket-kafka-31-cmvwl                1/1       Running   0          16d       10.130.9.4      openshift-node-11.hsh.io
+hshticket-kafka-31-jd3hk                1/1       Running   1          168d      10.128.8.18     openshift-node-14.hsh.io
+hshticket-provider-4-gzlmw              1/1       Running   0          49d       10.130.8.200    openshift-node-11.hsh.io
+hshticket-provider-4-pjswc              1/1       Running   0          49d       10.130.2.75     openshift-node-07.hsh.io
+hshticketdzq-provider-14-qwrk4          1/1       Running   1          168d      10.128.7.100    openshift-node-08.hsh.io
+hshticketmsg-provider-15-4qkjj          1/1       Running   1          168d      10.128.7.98     openshift-node-08.hsh.io
+hshuser-authentication-69-0g5tq         1/1       Running   0          5d        10.130.9.50     openshift-node-11.hsh.io
+hshuser-authentication-69-bk16p         0/1       Evicted   0          5d        <none>          openshift-node-07.hsh.io
+hshuser-authentication-69-fwdqn         1/1       Running   0          3d        10.129.10.184   openshift-node-18.hsh.io
+hshuser-authentication-69-z691k         1/1       Running   0          8d        10.130.7.222    openshift-node-09.hsh.io
+hshuser-batch-56-rrhfd                  1/1       Running   0          56d       10.129.6.206    openshift-node-10.hsh.io
+hshuser-consumer-64-4txnc               1/1       Running   0          48d       10.130.2.90     openshift-node-07.hsh.io
+hshuser-consumer-64-9skwm               1/1       Running   0          48d       10.131.8.108    openshift-node-17.hsh.io
+hshuser-import-29-hksvn                 1/1       Running   1          159d      10.129.2.201    openshift-node-03.hsh.io
+hshuser-provider-46-j98w6               1/1       Running   0          10d       10.130.2.161    openshift-node-07.hsh.io
+hshuser-provider-46-xr65z               1/1       Running   0          10d       10.129.10.118   openshift-node-18.hsh.io
+hshuser-test-5-85pkt                    1/1       Running   0          48d       10.128.7.159    openshift-node-08.hsh.io
+sc-web-844-deploy                       0/1       Error     0          2d        10.129.10.202   openshift-node-18.hsh.io
+sc-web-846-4v8mm                        1/1       Running   0          1d        10.129.7.66     openshift-node-10.hsh.io
+sc-web-846-73v45                        1/1       Running   0          1d        10.129.3.95     openshift-node-03.hsh.io
+sc-web-846-xt2gq                        1/1       Running   0          1d        10.130.6.69     openshift-node-09.hsh.io
+sc-web-942-build                        0/1       Error     0          3d        10.130.6.51     openshift-node-09.hsh.io
+sc-web-946-build                        0/1       Error     0          2d        10.130.6.58     openshift-node-09.hsh.io
+sc-web-947-build                        0/1       Error     0          2d        10.129.3.90     openshift-node-03.hsh.io
+user-lable-7-2ltt5                      1/1       Running   0          2d        10.130.6.59     openshift-node-09.hsh.io
+user-lable-7-8nn4s                      0/1       Evicted   0          3d        <none>          openshift-node-18.hsh.io
+web-app-213-66hkj                       1/1       Running   1          82d       10.131.6.235    openshift-node-12.hsh.io
+web-app-213-93rwg                       1/1       Running   0          19d       10.129.3.61     openshift-node-03.hsh.io
+
+Administrator@LD-201802012328 MINGW64 /
+$ oc project cmbs-prod
+Now using project "cmbs-prod" on server "https://devops.hsh.w.cn:8443".
+
+Administrator@LD-201802012328 MINGW64 /
+$ oc get pod -o wide
+NAME                        READY     STATUS    RESTARTS   AGE       IP             NODE
+advert-admin-22-5sbt0       1/1       Running   0          56d       10.128.3.129   openshift-node-02.hsh.io
+advert-consumer-30-15phh    1/1       Running   0          56d       10.131.0.28    openshift-master-02.hsh.io
+advert-consumer-30-j7jd9    1/1       Running   0          56d       10.130.1.55    openshift-master-03.hsh.io
+advert-provider-54-mrfb0    1/1       Running   0          19d       10.128.4.180   openshift-node-05.hsh.io
+advert-provider-54-swhrp    1/1       Running   0          19d       10.129.3.63    openshift-node-03.hsh.io
+advert-search-12-nccbt      1/1       Running   6          82d       10.128.3.123   openshift-node-02.hsh.io
+message-admin-5-0r3mb       1/1       Running   6          82d       10.128.3.111   openshift-node-02.hsh.io
+message-consumer-8-mm83k    1/1       Running   0          56d       10.129.5.74    openshift-node-04.hsh.io
+message-consumer-8-vw47x    1/1       Running   0          56d       10.129.2.226   openshift-node-03.hsh.io
+message-provider-25-2dwx6   1/1       Running   0          15d       10.129.0.179   openshift-master-01.hsh.io
+message-provider-25-kh8hn   1/1       Running   0          15d       10.128.3.180   openshift-node-02.hsh.io
+message-search-7-bshbz      1/1       Running   12         82d       10.128.3.120   openshift-node-02.hsh.io
+
+Administrator@LD-201802012328 MINGW64 /
+$ cd f:
+
+Administrator@LD-201802012328 MINGW64 /f
+$ cd logs
+
+Administrator@LD-201802012328 MINGW64 /f/logs
+$ oc logs dc/advert-provider advert-provider2020122.log
+error: you may only specify a single resource type
+
+Administrator@LD-201802012328 MINGW64 /f/logs
+$ oc logs dc/advert-provider >> advert-provider2020122.log
+
+Administrator@LD-201802012328 MINGW64 /f/logs
+$ oc project activity-prod
+Now using project "activity-prod" on server "https://devops.hsh.w.cn:8443".
+
+Administrator@LD-201802012328 MINGW64 /f/logs
+$ oc get pod -o wide
+NAME                                 READY     STATUS    RESTARTS   AGE       IP              NODE
+heactivity-coupon-4-qdv4f            1/1       Running   0          54d       10.129.5.92     openshift-node-04.hsh.io
+heactivity-dolls-40-99h3d            1/1       Running   1          58d       10.130.2.10     openshift-node-07.hsh.io
+heactivity-drt-coupon-7-nzwpw        1/1       Running   0          51d       10.130.2.52     openshift-node-07.hsh.io
+heactivity-dy-movie-54-sb2hx         1/1       Running   0          18d       10.129.8.136    openshift-node-16.hsh.io
+heactivity-flow-order-5-7bvvh        1/1       Running   1          82d       10.130.10.163   openshift-node-13.hsh.io
+heactivity-flow-order-5-fptmv        1/1       Running   0          54d       10.128.4.109    openshift-node-05.hsh.io
+heactivity-gold-16-tn6pp             1/1       Running   0          22d       10.128.4.173    openshift-node-05.hsh.io
+heactivity-member-113-qnmpk          1/1       Running   0          2d        10.130.1.92     openshift-master-03.hsh.io
+heactivity-member-113-wqhqk          1/1       Running   0          2d        10.129.10.201   openshift-node-18.hsh.io
+heactivity-member-order-6-4fzw7      1/1       Running   6          82d       10.128.3.106    openshift-node-02.hsh.io
+heactivity-member-order-6-n3pdg      1/1       Running   0          19d       10.129.0.171    openshift-master-01.hsh.io
+heactivity-member-share-118-p5fs8    1/1       Running   1          83d       10.131.2.141    openshift-node-06.hsh.io
+heactivity-midautumngift-2-2srcp     1/1       Running   1          160d      10.131.2.133    openshift-node-06.hsh.io
+heactivity-midautumngift-2-xhndp     1/1       Running   0          56d       10.131.0.31     openshift-master-02.hsh.io
+heactivity-newgift-25-1z40r          1/1       Running   0          33d       10.131.8.163    openshift-node-17.hsh.io
+heactivity-news-3-gm3nr              1/1       Running   0          56d       10.130.10.170   openshift-node-13.hsh.io
+heactivity-order-53-blzjg            1/1       Running   0          54d       10.129.5.91     openshift-node-04.hsh.io
+heactivity-order-53-krpnw            1/1       Running   0          54d       10.131.0.59     openshift-master-02.hsh.io
+heactivity-raffle-login-59-scnn2     1/1       Running   0          6d        10.129.0.193    openshift-master-01.hsh.io
+heactivity-raffle-lottery-16-vvptc   1/1       Running   1          168d      10.129.8.85     openshift-node-16.hsh.io
+heactivity-redirect-11-59x9p         1/1       Running   0          54d       10.129.5.94     openshift-node-04.hsh.io
+heactivity-redirect-11-j7k8q         1/1       Running   0          19d       10.129.0.166    openshift-master-01.hsh.io
+heactivity-signin-30-rdx4r           1/1       Running   0          3d        10.128.6.43     openshift-node-08.hsh.io
+heactivity-ticket-21-ltzd2           1/1       Running   1          82d       10.131.8.26     openshift-node-17.hsh.io
+heactivity-ticket-21-zsf6c           1/1       Running   0          56d       10.128.3.127    openshift-node-02.hsh.io
+newactivity-36-7p7qx                 1/1       Running   0          16d       10.129.5.158    openshift-node-04.hsh.io
+newactivity-36-j0jbw                 1/1       Running   0          19d       10.129.10.65    openshift-node-18.hsh.io
+newactivity-36-qh8sg                 1/1       Running   0          19d       10.129.0.174    openshift-master-01.hsh.io
+web-app-43-19ldx                     1/1       Running   0          48d       10.129.3.11     openshift-node-03.hsh.io
+web-app-43-hqh6k                     1/1       Running   0          48d       10.131.2.162    openshift-node-06.hsh.io
+
+Administrator@LD-201802012328 MINGW64 /f/logs
+$ oc project moses-prod
+Now using project "moses-prod" on server "https://devops.hsh.w.cn:8443".
+
+Administrator@LD-201802012328 MINGW64 /f/logs
+$ oc get pod -o wide
+NAME                               READY     STATUS    RESTARTS   AGE       IP             NODE
+api-admin-14-ld07m                 1/1       Running   1          156d      10.130.2.4     openshift-node-07.hsh.io
+api-info-17-g6z17                  1/1       Running   0          52d       10.130.4.146   openshift-lb-01.hsh.io
+api-info-17-tgkfc                  1/1       Running   1          168d      10.128.0.238   openshift-node-01.hsh.io
+app-admin-consumer-19-lqzcj        1/1       Running   6          167d      10.130.1.49    openshift-master-03.hsh.io
+app-admin-provider-20-555z3        1/1       Running   0          19d       10.128.3.177   openshift-node-02.hsh.io
+app-admin-provider-20-vz8ww        1/1       Running   1          168d      10.129.8.84    openshift-node-16.hsh.io
+app-consumer-12-mdsrs              1/1       Running   1          202d      10.129.8.75    openshift-node-16.hsh.io
+app-consumer-12-rq0vs              1/1       Running   1          168d      10.128.0.240   openshift-node-01.hsh.io
+jpush-admin-43-pxh9v               1/1       Running   0          52d       10.130.4.144   openshift-lb-01.hsh.io
+jpush-command-11-nw43b             1/1       Running   1          168d      10.128.0.236   openshift-node-01.hsh.io
+jpush-provider-11-4q4p9            1/1       Running   1          168d      10.128.0.231   openshift-node-01.hsh.io
+jpush-query-9-j8z59                1/1       Running   1          168d      10.129.8.77    openshift-node-16.hsh.io
+message-admin-9-md4pk              1/1       Running   1          168d      10.128.0.232   openshift-node-01.hsh.io
+message-consumer-10-hnvr5          1/1       Running   0          48d       10.129.3.13    openshift-node-03.hsh.io
+message-provider-13-3trsv          1/1       Running   1          168d      10.128.0.237   openshift-node-01.hsh.io
+operation-log-admin-14-fll3w       1/1       Running   1          168d      10.129.8.78    openshift-node-16.hsh.io
+security-admin-consumer-21-l9cfq   1/1       Running   1          63d       10.128.0.239   openshift-node-01.hsh.io
+security-admin-provider-21-8954r   1/1       Running   6          110d      10.128.3.115   openshift-node-02.hsh.io
+shop-admin-consumer-5-b5c8r        1/1       Running   1          168d      10.128.0.235   openshift-node-01.hsh.io
+shop-admin-provider-6-s2vw3        1/1       Running   6          159d      10.128.3.118   openshift-node-02.hsh.io
+shop-admin-provider-6-sm0g2        1/1       Running   5          168d      10.130.1.52    openshift-master-03.hsh.io
+shop-consumer-9-g0sj8              1/1       Running   2          62d       10.130.1.50    openshift-master-03.hsh.io
+uploader-19-chbt1                  1/1       Running   1          168d      10.128.0.233   openshift-node-01.hsh.io
+uploader-19-cqscx                  1/1       Running   6          168d      10.130.1.51    openshift-master-03.hsh.io
+uploader-19-prv4j                  1/1       Running   1          174d      10.129.8.82    openshift-node-16.hsh.io
+website-search-8-4k7pv             1/1       Running   0          57d       10.130.1.54    openshift-master-03.hsh.io
+zoneconf-admin-consumer-16-gj7c6   1/1       Running   1          110d      10.129.2.203   openshift-node-03.hsh.io
+zoneconf-consumer-20-3z3v6         1/1       Running   0          48d       10.130.4.170   openshift-lb-01.hsh.io
+zoneconf-consumer-20-gs34f         1/1       Running   0          48d       10.130.2.84    openshift-node-07.hsh.io
+zoneconf-provider-48-dxscx         1/1       Running   6          159d      10.128.3.109   openshift-node-02.hsh.io
+zoneconf-provider-48-n0bkn         1/1       Running   1          182d      10.129.8.81    openshift-node-16.hsh.io
+zoneconf-search-7-lz1wh            1/1       Running   0          57d       10.131.0.23    openshift-master-02.hsh.io
+
+
+$ oc get pod -o wide
+NAME                       READY     STATUS    RESTARTS   AGE       IP              NODE
+docker-registry-11-vcqzz   1/1       Running   0          55d       10.128.0.244    openshift-node-01.hsh.io
+hawkular-apm-1-8c2s8       1/1       Running   0          19d       10.131.8.186    openshift-node-17.hsh.io
+hawkular-apm-es-1-ddrqt    1/1       Running   0          57d       10.130.1.53     openshift-master-03.hsh.io
+registry-console-3-wptmh   1/1       Running   1          82d       10.128.8.11     openshift-node-14.hsh.io
+router-32-bpzcx            1/1       Running   0          26d       10.108.78.134   openshift-master-02.hsh.io
+router-32-cp9sj            1/1       Running   0          26d       10.108.78.136   openshift-node-01.hsh.io
+router-32-dbd0g            1/1       Running   0          26d       10.108.78.138   openshift-node-03.hsh.io
+router-32-f4b46            1/1       Running   0          26d       10.108.78.140   openshift-node-05.hsh.io
+router-32-k8mpx            1/1       Running   0          26d       10.108.78.139   openshift-node-04.hsh.io
+router-32-lhbrl            1/1       Running   0          26d       10.108.78.145   openshift-lb-02.hsh.io
+router-32-psnbh            1/1       Running   0          26d       10.108.78.133   openshift-master-01.hsh.io
+router-32-zqc7k            1/1       Running   0          26d       10.108.78.135   openshift-master-03.hsh.io
+router-32-zv1kx            1/1       Running   0          26d       10.108.78.137   openshift-node-02.hsh.io
